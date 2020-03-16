@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">SIMARS MOBILE</string>
+    <string name="version">3.1</string>
+    <color name="album_title">#4c4c4c</color>
+
+    <string name="slide_1_african_story_books">Pilih Registrasi</string>
+    <string name="slide_0_TITLE">SIMARS MOBILE VERSI 3.0</string>
+    <string name="slide_1_deskripsi">Pilih menu registrasi berdasarkan status anda di RSUP Sanglah (Pegawai / Residen)</string>
+    <string name="slide_2_volunteer_professionals">Lengkapi Data Registrasi</string>
+    <string name="slide_3_download_and_go">SCAN QR CODE PADA SIMARS DESKTOP</string>
+    <string name="slide_4_different_languages">Registrasi Sukses</string>
+    <string name="slide_1_african_story_books_subtitle">That anyone can freely translate and distribute.</string>
+    <string name="slide_2_volunteer_professionals_subtitle">Lengkapi data anda dengan mengisi PIN, NIP / NPP, NO HANDPHONE untuk PEGAWAI atau PIN serta NO HANDPHONE untuk RESIDEN </string>
+    <string name="slide_3_download_and_go_subtitle" >Anda harus login ke SIMARS pada komputer rumah sakit, kemudian pada pojok kanan atas disamping nama anda tersedia tombol QR untuk menampilkan QR Code.</string>
+    <string name="slide_4_different_languages_subtitle">Registrasi anda telah berhasil jika muncul notifikasi bahwa anda telah terdaftar. Jika gagal, pastikan kembali informasi yang anda masukan.</string>
+    <string name="view_sample_tut">View Tutorial Example</string>
+
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="SUBMIT"/>
+
+    <string-array name="array_jenis">
+        <item>Alat Medis</item>
+        <item>Non Medis</item>
+        <item>Komputer / Jaringan</item>
+        <item>Gedung</item>
+        <item>Prasarana</item>
+        <item>Sanitasi</item>
+    </string-array>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="respon_order">Respon Order</string>
+    <string name="input_bahan">Input Bahan</string>
+    <string name="simpan">Simpan</string>
+    <string name="finish">Finish</string>
+    <string name="no_order">No Order</string>
+    <string name="tgl_lapor">Tgl Lapor</string>
+    <string name="keluhan">Keluhan</string>
+    <string name="jenis_order">Jenis Order</string>
+    <string name="ruangan">Ruangan</string>
+
+
+    <string name="text_expand_me">Expand Me</string>
+    <string name="text_collapse_me">Collapse Me</string>
+    <string name="no_data_available">no_data_available</string>
+    <string name="linear_layout">LINEAR LAYOUT</string>
+    <string name="linear_layout_2">LINEAR LAYOUT 2</string>
+    <string name="history_bahan">HISTORY BAHAN</string>
+    <string name="bahan">bahan</string>
+    <string name="unit">unit</string>
+    <string name="nama_bahan">nama_bahan</string>
+    <string name="tgl_mulai">tgl mulai</string>
+    <string name="tgl_selesai">tgl selesai</string>
+    <string name="history_pekerjaan_row">history_pekerjaan_row</string>
+    <string name="history_pekerjaan">HISTORY PEKERJAAN</string>
+    <string name="halaman_utama">Halaman Utama</string>
+    <string name="perbaikan_alat">Perbaikan Alat</string>
+    <string name="respon_order_navigation">Respon Order</string>
+    <string name="menu_jenis_perbaikan">MENU JENIS PERBAIKAN</string>
+    <string name="laporan_kerusakan">Laporan Kerusakan</string>
+    <string name="total_laporan_masuk">Total Laporan Masuk</string>
+    <string name="number">number</string>
+    <string name="menunggu">Menunggu</string>
+
+    <string-array name="response_array">
+        <item>Dikerjakan</item>
+        <item>Pending: Menunggu Bahan</item>
+        <item>Pending: Usulan Pihak III</item>
+    </string-array>
+
+</resources>

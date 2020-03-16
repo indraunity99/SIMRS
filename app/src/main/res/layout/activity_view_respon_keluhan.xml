@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swiperefreshlayout"
+        android:layout_marginTop="55dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--Scrollable content here-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:id="@+id/nama_keluhan_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keluhan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:paddingTop="20dp"
+                android:layout_marginBottom="-5dp"/>
+
+            <TextView
+                android:id="@+id/nomor_order_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama_keluhan_view"
+                android:text="@string/no_order" />
+
+            <TextView
+                android:id="@+id/tgl_lapor_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nomor_order_view"
+                android:text="@string/tgl_lapor" />
+
+            <TextView
+                android:id="@+id/jenis_order_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tgl_lapor_view"
+                android:text="@string/jenis_order" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_header_respon"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/jenis_order_view"
+                android:orientation="vertical"
+                android:text="@string/linear_layout"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|start"
+                android:background="#406922">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/history_pekerjaan" />
+            </LinearLayout>
+
+            <ViewSwitcher
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switcher_pekerjaan"
+                android:layout_below="@id/linear_layout_header_respon"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_pekerjaan"
+                    android:layout_width="377dp"
+                    android:layout_height="156dp"
+                    android:layout_below="@id/linear_layout_header_respon" />
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:layout_below="@id/linear_layout_header_respon"/>
+            </ViewSwitcher>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_header_input"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/switcher_pekerjaan"
+                android:orientation="vertical"
+                android:text="@string/linear_layout_2"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|start"
+                android:background="#406922">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/history_bahan"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+            <ViewSwitcher
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switcher_bahan"
+                android:layout_below="@+id/linear_layout_header_input"
+                >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_input"
+                android:layout_width="377dp"
+                android:layout_height="156dp"
+                android:layout_below="@id/linear_layout_header_input" />
+            <TextView
+                android:id="@+id/empty_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:layout_below="@id/linear_layout_header_input"/>
+            </ViewSwitcher>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_header_images"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/switcher_bahan"
+                android:orientation="vertical"
+                android:text="LIST IMAGES"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|start"
+                android:background="#406922">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/linear_layout_header_images"
+                    android:layout_alignLeft="@+id/linear_layout_header_images"
+                    android:gravity="center"
+                    android:text="LIST IMAGES"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_images"
+                android:layout_width="377dp"
+                android:layout_height="156dp"
+                android:layout_below="@id/linear_layout_header_images" />
+            <TextView
+                android:id="@+id/empty_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:layout_below="@id/linear_layout_header_images"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="left|bottom">
+
+        <Button
+            android:id="@+id/button_respon_view"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_button"
+            android:padding="5dp"
+            android:text="@string/respon_order"
+            android:textColor="#1B5E20"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_input_bahan_view"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_button"
+            android:padding="5dp"
+            android:text="@string/input_bahan"
+            android:textColor="#1B5E20"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_finish_view"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_check"
+            android:padding="5dp"
+            android:text="@string/finish"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

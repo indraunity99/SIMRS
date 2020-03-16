@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/nama_history_pekerjaan_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="#4d4d4d"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/history_pekerjaan_row"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_row_pekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/nama_history_pekerjaan_row"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/tgl_mulai_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="@string/tgl_mulai"
+            android:layout_weight="0.5"/>
+        <TextView
+            android:id="@+id/tgl_selesai_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="@string/tgl_selesai"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+
+</RelativeLayout>

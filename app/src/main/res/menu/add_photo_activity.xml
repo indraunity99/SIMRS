@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="info.androidhive.recyclerviewsearch.MainActivity">
+    <item
+        android:id="@+id/add_photo_activity"
+        android:icon="@drawable/ic_baseline_add_a_photo_white_36dp"
+        android:orderInCategory="100"
+        android:title="add photo"
+        app:showAsAction="ifRoom" />
+</menu>

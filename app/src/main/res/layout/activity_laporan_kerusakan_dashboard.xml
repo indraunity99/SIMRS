@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--Scrollable content here-->
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TMPT"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:padding="16dp"
+                android:textColor="#6f6f6f"
+                android:id="@+id/text_view_tmpt_tgs"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:id="@+id/piechart">
+            </com.github.mikephil.charting.charts.PieChart>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#406922"
+                android:layout_marginStart="@dimen/horizontal_margin_double"
+                android:layout_marginTop="@dimen/vertical_margin_12dp"
+                android:layout_marginEnd="@dimen/horizontal_margin_double"
+                android:layout_marginBottom="@dimen/vertical_margin_half"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear1"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/horizontal_margin_double"
+                android:layout_marginTop="@dimen/vertical_margin_12dp"
+                android:layout_marginEnd="@dimen/horizontal_margin_double"
+                android:layout_marginBottom="@dimen/vertical_margin_half">
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linear1"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/total_dash"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:padding="10dp"
+                        android:text="@string/total_laporan_masuk"
+                        android:textColor="#f06292" />
+                    <TextView
+                        android:id="@+id/number_total_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#f06292"
+                        android:padding="10dp"
+                        android:text="@string/number"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_menunggu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linear1"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/menunggu_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/menunggu"
+                        android:textColor="#ff9100"
+                        android:layout_weight="0.5"/>
+                    <TextView
+                        android:id="@+id/number_menunggu_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ff9100"
+                        android:padding="10dp"
+                        android:text="NUMBER"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_dikerjakan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linear1"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/dikerjakan_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Dikerjakan"
+                        android:textColor="#c97b63"
+                        android:layout_weight="0.5"/>
+                    <TextView
+                        android:id="@+id/number_dikerjakan_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#c97b63"
+                        android:padding="10dp"
+                        android:text="NUMBER"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_pending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linear1"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/pending_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pending"
+                        android:textColor="#558b2f"
+                        android:layout_weight="0.5"/>
+                    <TextView
+                        android:id="@+id/number_pending_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#558b2f"
+                        android:padding="10dp"
+                        android:text="NUMBER"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_selesai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linear1"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/selesai_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Selesai"
+                        android:textColor="#29b6f6"
+                        android:layout_weight="0.5"
+                        />
+                    <TextView
+                        android:id="@+id/number_selesai_dash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#29b6f6"
+                        android:padding="10dp"
+                        android:text="NUMBER"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/container_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:alignmentMode="alignMargins"
+                app:columnCount="2"
+                app:columnOrderPreserved="false"
+                app:orientation="horizontal"
+                app:rowCount="3"
+                android:horizontalSpacing="1dp"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    android:id="@+id/card_respon"
+                    android:padding="0dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/folder_96px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Respon"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="#6f6f6f" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    android:id="@+id/card_dikerjakan"
+                    android:padding="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:background="@drawable/work_96px"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Dikerjakan"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="#6f6f6f" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    android:id="@+id/card_pending"
+                    android:padding="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:background="@drawable/data_pending_96px"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Pending"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="#6f6f6f" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    android:id="@+id/card_selesai"
+                    android:padding="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:background="@drawable/checked_96px"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Selesai"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="#6f6f6f" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </android.support.v7.widget.GridLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

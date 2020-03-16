@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mobile.rsupsanglah.simrsmobile.activity.MainActivity">
+
+    <item
+        android:id="@+id/itemHelp"
+        android:title="Help"
+        android:icon="@drawable/ic_help_outline_black_24dp"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        >
+    </item>
+
+    <item
+        android:id="@+id/itemRefresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+
+        >
+    </item>
+    <!--<item-->
+        <!--android:id="@+id/itemLogout"-->
+        <!--android:title="Logout"-->
+        <!--android:icon="@drawable/ic_input_black_24dp"-->
+        <!--android:orderInCategory="200"-->
+        <!--app:showAsAction="ifRoom|collapseActionView">-->
+    <!--</item>-->
+
+    <!--<item-->
+        <!--android:id="@+id/itemQr"-->
+        <!--android:title="QR Code"-->
+        <!--android:icon="@drawable/ic_qrcode"-->
+        <!--android:orderInCategory="200"-->
+        <!--app:showAsAction="ifRoom|collapseActionView">-->
+    <!--</item>-->
+
+    <item
+        android:id="@+id/itemClose"
+        android:title="Close"
+        android:icon="@drawable/ic_close_black_24dp"
+        android:orderInCategory="200"
+        app:showAsAction="never">
+    </item>
+
+
+</menu>
